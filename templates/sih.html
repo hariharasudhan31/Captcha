@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unique Identification Authority of India - eAadhaar Download</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+
+        .header {
+            background-color: #003366;
+            color: white;
+            padding: 10px 0;
+            font-size: 1.2em;
+            font-weight: bold;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        .header #header-title {
+            text-align: center;
+            flex-grow: 1;
+        }
+
+        .language-select {
+            background-color: white;
+            color: #003366;
+            padding: 5px;
+            border: none;
+            font-size: 1em;
+            border-radius: 5px;
+            cursor: pointer;
+            position: absolute;
+            right: 20px;
+        }
+
+        .main-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+        }
+
+        .container {
+            width: 40%;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            padding: 20px;
+            margin-right: 20px;
+        }
+
+        .container h2 {
+            margin: 0;
+            font-size: 1.5em;
+            color: #003366;
+            border-bottom: 2px solid #eaeaea;
+            padding-bottom: 10px;
+        }
+
+        .container form {
+            margin-top: 20px;
+        }
+
+        .container form label {
+            display: block;
+            margin: 10px 0;
+            font-weight: bold;
+        }
+
+        .container form input[type="radio"] {
+            margin-right: 10px;
+        }
+
+        .container form input[type="text"], 
+        .container form input[type="date"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 1em;
+        }
+
+        .container form input[type="submit"] {
+            background-color: #003366;
+            color: white;
+            border: none;
+            padding: 12px;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 1em;
+            margin-top: 10px;
+        }
+
+        .sidebar {
+            width: 25%;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            padding: 20px;
+            position: relative;
+        }
+
+        .sidebar h3 {
+            font-size: 1.2em;
+            color: #003366;
+            margin-bottom: 20px;
+        }
+
+        .faq {
+            margin-top: 10px;
+        }
+
+        .faq details {
+            margin-bottom: 10px;
+        }
+
+        .faq details summary {
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 1em;
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+        .faq details summary:hover {
+            color: #003366;
+        }
+
+        .faq details p {
+            margin-top: 5px;
+            font-size: 0.9em;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <div id="header-title">Unique Identification Authority of India</div>
+        <select id="language-select" class="language-select" onchange="changeLanguage()">
+            <option value="english">English</option>
+            <option value="hindi">हिन्दी</option>
+            <option value="tamil">தமிழ்</option>
+        </select>
+    </div>
+
+    <div class="main-container">
+        
+        <div class="container">
+            <h2 id="form-title">eAadhaar Download</h2>
+            <form id="form">
+                <label for="aadhaar">
+                    <input type="radio" id="aadhaar" name="id-type" value="aadhaar" checked> Aadhaar Number
+                </label>
+                <label for="enrolment">
+                    <input type="radio" id="enrolment" name="id-type" value="enrolment"> Enrolment ID Number
+                </label>
+                <label for="virtual">
+                    <input type="radio" id="virtual" name="id-type" value="virtual"> Virtual ID Number
+                </label>
+                <input type="text" id="aadhaar-input" placeholder="Enter Aadhaar Number" required>
+                <label for="dob">Date of Birth</label>
+                <input type="date" id="dob" required>
+                
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+
+       
+        <div class="sidebar">
+            <h3 id="faq-title">Frequently Asked Questions</h3>
+            <div class="faq">
+                <details>
+                    <summary>What is e-Aadhaar?</summary>
+                    <p>e-Aadhaar is a password-protected electronic copy of Aadhaar.</p>
+                </details>
+                <details>
+                    <summary>Is e-Aadhaar equally valid like physical copy of Aadhaar?</summary>
+                    <p>Yes, e-Aadhaar is equally valid like the physical copy of Aadhaar.</p>
+                </details>
+                <details>
+                    <summary>What is Masked Aadhaar?</summary>
+                    <p>Masked Aadhaar is an option where the Aadhaar number is partially hidden.</p>
+                </details>
+                <details>
+                    <summary>How to validate digital signatures in e-Aadhaar?</summary>
+                    <p>You can validate digital signatures using Adobe Reader.</p>
+                </details>
+                <details>
+                    <summary>What is the Password of e-Aadhaar?</summary>
+                    <p>Your e-Aadhaar password is the first four letters of your name in CAPITAL letters followed by your birth year (YYYY).</p>
+                </details>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let startTime = new Date().getTime();
+        let lastClickTime, lastKeyTime, lastMouseMoveTime;
+        let keyHoldDurations = [];
+        let clickIntervals = [];
+        let mouseMoveDistances = [];
+        let keyIntervals = [];
+        let mouseJitterCount = 0;
+        let mouseTremorCount = 0;
+        let mouseAngleChanges = [];
+        let xPositions = [];
+        let fieldTimes = [];
+        let fieldStartTime;
+        let backspaceCount = 0;
+        let repeatedKeyCount = 0;
+        let previousKey = '';
+        let previousMousePos = null;
+        let varianceXClicks = [];
+    
+        // Capturing the start time when the form is displayed
+        fieldStartTime = new Date().getTime();
+    
+        // Capture form submission event
+        document.querySelector('#form').addEventListener('submit', (event) => {
+            event.preventDefault();
+            
+            // Basic validation (e.g., check if Aadhaar number and DOB are filled)
+            const aadhaarNumber = document.getElementById('aadhaar-input').value;
+            const dob = document.getElementById('dob').value;
+    
+            if (aadhaarNumber && dob) {
+                alert('Form submitted successfully');
+            } else {
+                alert('Please fill in all the required fields');
+            }
+            const fieldEndTime = new Date().getTime();
+            const fieldTime = (fieldEndTime - fieldStartTime) / 1000;
+            fieldTimes.push(fieldTime);
+    
+            if (mouseMoveDistances.length > 0) {
+                const lastDistance = mouseMoveDistances[mouseMoveDistances.length - 1];
+                if (lastDistance < 5) {
+                    mouseJitterCount++;
+                }
+            }
+    
+            console.log('Human Interaction Metrics:');
+            console.log('Time spent on page: ', (fieldEndTime - startTime) / 1000, 'seconds');
+            console.log('Average mouse speed: ', (mouseMoveDistances.reduce((a, b) => a + b, 0) / mouseMoveDistances.length).toFixed(2), 'pixels per move');
+            console.log('Average time spent on fields: ', (fieldTimes.reduce((a, b) => a + b, 0) / fieldTimes.length).toFixed(2), 'seconds');
+            console.log('Average interval between fields: ', (fieldTimes.reduce((a, b) => a + b, 0) / fieldTimes.length).toFixed(2), 'seconds');
+            console.log('Mouse jitter count: ', mouseJitterCount);
+            console.log('Mouse tremors count: ', mouseTremorCount);
+            console.log('Average mouse angle change: ', (mouseAngleChanges.reduce((a, b) => a + b, 0) / mouseAngleChanges.length).toFixed(2), 'degrees');
+            console.log('Backspace count: ', backspaceCount);
+            console.log('Repeated key count: ', repeatedKeyCount);
+    
+            // Calculate variance in x-axis clicks
+            if (varianceXClicks.length > 1) {
+                let mean = varianceXClicks.reduce((a, b) => a + b, 0) / varianceXClicks.length;
+                let variance = varianceXClicks.reduce((a, b) => a + Math.pow(b - mean, 2), 0) / (varianceXClicks.length - 1);
+                console.log('Average variance of x-axis clicks: ', variance.toFixed(2));
+            } else {
+                console.log('An error occurred: variance requires at least two data points');
+            }
+    
+            // Reset the metrics for the next session
+            keyHoldDurations = [];
+            clickIntervals = [];
+            mouseMoveDistances = [];
+            keyIntervals = [];
+            mouseAngleChanges = [];
+            fieldTimes = [];
+            backspaceCount = 0;
+            repeatedKeyCount = 0;
+            mouseTremorCount = 0;
+            varianceXClicks = [];
+        });
+    
+        // Track mouse movements for calculating speed, angle, jitter, and tremors
+        document.addEventListener('mousemove', (event) => {
+            const currentMousePos = { x: event.clientX, y: event.clientY };
+            xPositions.push(event.clientX);
+    
+            if (previousMousePos) {
+                const dx = currentMousePos.x - previousMousePos.x;
+                const dy = currentMousePos.y - previousMousePos.y;
+                const distance = Math.sqrt(dx * dx + dy * dy);
+                mouseMoveDistances.push(distance);
+    
+                // Track jitter and tremor count
+                if (distance < 5) {
+                    mouseTremorCount++; // Small movements
+                }
+    
+                // Track mouse angle changes
+                const angle = Math.atan2(dy, dx) * (180 / Math.PI);
+                mouseAngleChanges.push(Math.abs(angle));
+    
+                // Variance in x-axis clicks (for detecting odd mouse movement patterns)
+                if (varianceXClicks.length > 0) {
+                    const lastX = varianceXClicks[varianceXClicks.length - 1];
+                    varianceXClicks.push(Math.abs(currentMousePos.x - lastX));
+                } else {
+                    varianceXClicks.push(currentMousePos.x);
+                }
+            }
+    
+            previousMousePos = currentMousePos;
+        });
+    
+        // Track key press events and hold duration
+        document.addEventListener('keydown', (event) => {
+            const keyTime = new Date().getTime();
+            if (lastKeyTime) {
+                keyIntervals.push((keyTime - lastKeyTime) / 1000); // Interval between key presses
+            }
+            lastKeyTime = keyTime;
+    
+            if (event.key === 'Backspace') {
+                backspaceCount++;
+            }
+            if (event.key === previousKey) {
+                repeatedKeyCount++;
+            }
+            previousKey = event.key;
+    
+            const holdStartTime = new Date().getTime();
+            event.target.addEventListener('keyup', function onRelease() {
+                const holdEndTime = new Date().getTime();
+                keyHoldDurations.push((holdEndTime - holdStartTime) / 1000);
+                event.target.removeEventListener('keyup', onRelease);
+            });
+        });
+    </script>
+    

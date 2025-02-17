@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "eUutl60eEfM=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\varun\\MySeleniumProject\\MySeleniumProject.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\varun\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
+    "C:\\Users\\varun\\.nuget\\packages\\selenium.webdriver\\4.8.0\\selenium.webdriver.4.8.0.nupkg.sha512",
+    "C:\\Users\\varun\\.nuget\\packages\\selenium.webdriver.chromedriver\\130.0.6723.600-beta\\selenium.webdriver.chromedriver.130.0.6723.600-beta.nupkg.sha512"
+  ],
+  "logs": []
+}
